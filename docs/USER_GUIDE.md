@@ -28,7 +28,14 @@
 
 系统需要 poppler 来处理 PDF 文件。根据你的操作系统选择对应方式安装：
 
-- **Windows**: 下载 [poppler for Windows](https://github.com/ossamamehmood/Poppler-Windows/releases)，解压后将 `bin` 目录添加到系统环境变量 PATH
+- **Windows**:
+  ```bash
+  # 通过 scoop
+  scoop install poppler
+  # 或通过 choco
+  choco install poppler
+  ```
+  安装后重启终端，确保 `pdftoppm` 命令可用。
 - **macOS**: 终端执行 `brew install poppler`
 - **Linux**: 终端执行 `sudo apt-get install poppler-utils`
 
@@ -39,7 +46,7 @@
 pip install -r requirements.txt
 
 # 2. 复制环境变量模板并填写 API 密钥
-cp .env.example .env
+copy .env.example .env
 ```
 
 打开 `.env` 文件，填写以下必需项（参考文件中的注释说明）：
